@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SunshineChronicles</title>
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+  <!--My body starts here-->
+  <body class="container bg-info-subtle">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <!--decided to have each section of the page in a card to make it look sort of like an app or "blocky" style, the page title and intro is below-->
+          <div class="text-center mt-5 text-warning-emphasis">
+            <h1><strong>◆◈◆◈◆◈◆◈ ҉　Sunshine Chronicles ҉　 ◈◆◈◆◈◆◈◆</strong></h1>
+          </div>
+          <div class="card bg-warning">
+            <div class="card-body">
+              <p class="card-text text-muted">
+                <strong>Welcome to Sunshine Chronicles!</strong> Your personal
+                space to capture the highlights that brighten your days. Cherish
+                small victories, delightful encounters, and moments of pure joy.
+                Simply submit one daily highlight and pick from three levels of
+                sunshine to express your joy.
+              </p>
+            </div>
+          </div>
+          <!--Below is the section with the form to add highlight of your day and to pick how good it is with a sun rating-->
+          <div class="card bg-danger-subtle text-warning-emphasis mt-5">
+            <div class="card-header text-center">
+              <strong>Highlight of your Day</strong>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-9">
+                  <div class="b4-form-group">
+                    <label for="new-highlight" class="form-label">
+                      Add your highlight for the day!
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="new-highlight"
+                      placeholder="Write your highlight here!"
+                    />
+                  </div>
+                </div>
+                <!--This is for picking between 3 options using radio buttons-->
+                <div class="col-md-3">
+                  How bright was it?
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="mood"
+                      id="oneSun"
+                      checked
+                      value="🔆"
+                    />
+                    <label class="sun-label" for="oneSun"> 🔆 </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="mood"
+                      id="twoSuns"
+                      value="🔆🔆"
+                    />
+                    <label class="form-check-label" for="twoSuns"> 🔆🔆 </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="mood"
+                      id="triSuns"
+                      value="🔆🔆🔆"
+                    />
+                    <label class="form-check-label" for="triSuns">
+                      🔆🔆🔆
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3 text-center">
+                <button
+                  type="button"
+                  class="btn btn-warning text-warning-emphasis btn-sm"
+                  id="addH"
+                >
+                  <strong>Shine on!</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Below is another card with the table for adding rows of highlights -->
+          <div class="card text-bg-info text-muted mt-5">
+            <div class="card-header text-center">
+              <strong>Daily Sunrays Book</strong>
+            </div>
+            <div class="card-body text-muted">
+              <p class="card-text">Your past daily highlights...</p>
+              <table
+                id="logList"
+                class="table table-info table-hover table-bordered table-striped"
+              >
+                <tr>
+                  <th>Date</th>
+                  <th>Highlight of the Day</th>
+                  <th>Mood</th>
+                  <th>Action</th>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
